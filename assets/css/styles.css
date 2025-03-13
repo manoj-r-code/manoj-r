@@ -247,7 +247,7 @@ img {
   justify-self: center;
 }
 .about__img img {
-  width: 200px;
+  width: 0px;
   border-radius: 0.5rem;
 }
 
@@ -484,4 +484,92 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+
+
+.about__text {
+  font-size: 1.12rem; /* Adjust text size */
+  line-height: 1.6; /* Improve readability */
+}
+
+
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.skills__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px; /* Fixed Box Width */
+  height: 120px; /* Fixed Box Height */
+}
+
+
+
+.skills__icon {
+  font-size: 4rem;
+  color: var(--first-color);
+  transition: transform 0.3s;
+}
+
+.skills__icon:hover {
+  transform: scale(1.1);
+}
+
+.skills__name {
+  font-size: 1.2rem;
+  font-weight: var(--font-semi);
+  margin-top: 0.5rem;
+}
+
+/* 
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 1.5rem;
+}
+
+.skills__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px; 
+  height: 150px;
+  background-color: var(--second-color);
+  border-radius: 10px; /* Rounded Corners 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.skills__icon {
+  font-size: 3rem;
+  color: var(--first-color);
+}
+
+.skills__name {
+  font-size: 1rem;
+  font-weight: var(--font-semi);
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.skills__data:hover {
+  transform: translateY(-5px);
+  background-color: var(--first-color);
+} */
+.svg-icon {
+  width: 64px; /* Adjust size */
+  height: 64px;
+  display: block;
+  margin: 0 auto;
 }
