@@ -661,16 +661,25 @@ img {
   gap: 2rem; /* Equal gap on all sides */
   padding: 2rem;
   justify-content: center; /* Centers the grid items */
+  align-items: stretch; /* Ensures equal height for all cards */
+
 }
 
 .project__card {
+  display: flex;
+  flex-direction: column; /* Stack content properly */
+  justify-content: space-between; /* Distributes content evenly */
   padding: 1.5rem;
-  height: 300px;
-  max-width: 600px; /* Limits width for better alignment */
+  min-height: 300px; /* Sets a minimum height */
+  max-width: 600px;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  margin: auto; /* Centers the card */
+  margin: auto;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 
@@ -703,5 +712,7 @@ p {
   
   .project__card {
     width: 100%; /* Full width for mobile */
+    min-height: auto; /* Allow auto height on mobile */
+
   }
 }
