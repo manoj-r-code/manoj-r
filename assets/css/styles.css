@@ -468,10 +468,10 @@ img {
     align-items: center;
     text-align: initial;
   }
-  .work__container {
+  /* .work__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
-  }
+  } */
 }
 @media screen and (min-width: 992px) {
   .bd-grid {
@@ -489,7 +489,7 @@ img {
 
 
 .about__text {
-  font-size: 1.12rem; /* Adjust text size */
+  font-size: 1.11rem; /* Adjust text size */
   line-height: 1.6; /* Improve readability */
 }
 
@@ -572,4 +572,136 @@ img {
   height: 64px;
   display: block;
   margin: 0 auto;
+}
+
+
+
+
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding-left: 2rem;
+  border-left: 3px solid var(--first-color);
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--first-color);
+  border-radius: 50%;
+}
+
+.timeline__content {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+}
+
+.timeline__title {
+  font-size: 1.2rem;
+  font-weight: var(--font-semi);
+  color: var(--first-color);
+   margin-top: -0.5rem; /* Moves the title slightly up */
+  position: relative;
+  top: -4px; /* Fine-tune the upward position */
+  margin: 0.2rem 0;
+
+}
+
+.timeline__company {
+  font-size: 1rem;
+  color: var(--second-color);
+  font-weight: 600;
+  display: block;
+}
+
+.timeline__description {
+  font-size: 1rem;
+  color: var(--second-color);
+  line-height: 1.5;
+} 
+.timeline__content:hover {
+  transform: translateY(-5px); /* Lifts the card slightly */
+  box-shadow: 0 6px 15px rgba(54, 168, 203, 0.1); /* Adds a subtle glow */
+  background-color:  rgba(178, 228, 243, 0.1); /* Light hover background */
+}
+
+.timeline__title:hover {
+  color: var(--first-color); /* Changes title color slightly */
+  transition: color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Responsive Grid */
+  gap: 2rem; /* Equal gap on all sides */
+  padding: 2rem;
+  justify-content: center; /* Centers the grid items */
+}
+
+.project__card {
+  padding: 1.5rem;
+  height: 300px;
+  max-width: 600px; /* Limits width for better alignment */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: auto; /* Centers the card */
+}
+
+
+h3 {
+  color: #3532f4;
+  font-size: 1.3rem;
+}
+
+.tech-stack {
+  font-size: 1.05rem;
+  font-weight:bolder;
+  color: #0D1730;
+}
+
+p {
+  color: #302f2f;
+  font-size: 1.005rem;
+}
+
+.project__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 992px) {
+  .projects__container {
+    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+  }
+  
+  .project__card {
+    width: 100%; /* Full width for mobile */
+  }
 }
